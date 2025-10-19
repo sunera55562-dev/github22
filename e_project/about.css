@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+      color: #ffffff;
+      min-height: 100vh;
+    }
+      /* Navbar */
+     nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav .brand img {
+      height: 45px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    nav .brand img:hover {
+      transform: scale(1.1);
+    }
+
+    nav .brand span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav .nav-links a:hover {
+      color: #698cff;
+    }
+
+    nav .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #3f2092;
+      transition: width 0.3s ease;
+    }
+
+    nav .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      background: #1f1f2e;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 0;
+      animation: fadeDown 0.3s ease;
+    }
+
+    .dropdown-menu .dropdown-item {
+      color: #fff;
+      transition: all 0.3s ease;
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 1267px) {
+  .navbar-expand-xxl .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-xxl .navbar-toggler {
+    display: block !important;
+  }
+}
+
+
+.navbar-expand-xxl .navbar-collapse.show {
+  display: block !important;
+}
+
+
+    .gradient-text {
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%;
+      animation: gradient 3s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .card-custom {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+     /* Footer */
+    .footer-bg{background:rgba(0,0,0,.5)}
+    .footer-link{color:#bfc6d9;text-decoration:none}
+    .footer-link:hover{color:#00e5ff}
+    .gradient-text {
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%;
+      animation: gradient 3s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+  from { text-shadow: 0 0 15px #ff416c, 0 0 30px #ff4b2b; }
+  to { text-shadow: 0 0 25px #ffdd57, 0 0 50px #ff4b2b; }
+}

@@ -1,0 +1,124 @@
+
+    :root{
+      --bg1:#0f0c29; --bg2:#24243e; --bg3:#2c3e50;
+      --accent1:#4ecdc4; --accent2:#45b7d1; --accent3:#ff6b6b;
+      --text-dim:#b9c0d3;
+    }
+
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 50%, var(--bg3) 100%);
+      color:#fff;
+      min-height:100vh;
+    }
+
+    /* Navbar */
+    nav .brand{display:flex;
+      align-items:center;
+      gap:10px}
+    nav .brand img{height:45px;
+      width:auto;
+      transition:transform .3s ease}
+    nav .brand img:hover{transform:scale(1.08)}
+    nav .brand span{font-size:22px;
+      font-weight:700;
+      letter-spacing:.5px}
+    nav .nav-links a{margin-left:20px;
+      position:relative;
+      color:#f1f1f1;
+      font-weight:500;
+      transition:.25s}
+    nav .nav-links a:hover{color:#698cff;}
+    nav .nav-links a::after{
+      content:''; 
+      position:absolute;
+       left:0;
+        bottom:-6px;
+         height:2px;
+          width:0;
+      background:#3f2092; 
+      transition:width .25s ease;
+    }
+    nav .nav-links a:hover::after{width:100%}
+    .dropdown-menu{background:#1f1f2e;
+      border:none;border-radius:10px;
+      padding:10px 0;
+      animation:fadeDown .25s ease}
+    .dropdown-item{color:#fff}
+    .dropdown-item:hover{background:linear-gradient(90deg,#6a11cb,#2575fc);
+      color:#fff;border-radius:6px}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+      @media (max-width: 1267px) {
+  .navbar-expand-xxl .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-xxl .navbar-toggler {
+    display: block !important;
+  }
+}
+
+
+.navbar-expand-xxl .navbar-collapse.show {
+  display: block !important;
+}
+
+    /* Utilities */
+    .font-montserrat{font-family:'Montserrat',sans-serif}
+    .text-dim{color:var(--text-dim)!important}
+    .text-accent{color:#00e5ff!important}
+    .mt-nav{margin-top:84px} /* push below fixed navbar */
+
+    /* Gradient text */
+    .gradient-text{
+      background:linear-gradient(45deg, var(--accent3), var(--accent1), var(--accent2));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-size:300% 300%; animation:gradAnim 3s ease infinite;
+    }
+    @keyframes gradAnim{
+      0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%}
+    }
+
+    /* Cards / chips */
+    .show-card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      transition:transform .25s ease, box-shadow .25s ease;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+    }
+    .show-card:hover{transform:translateY(-6px);box-shadow:0 14px 42px rgba(0,0,0,.35)}
+    .date-badge{
+      display:inline-block;
+      background:linear-gradient(45deg, var(--accent3), var(--accent1));
+      padding:8px 16px;border-radius:24px;font-weight:600;font-size:.9rem
+    }
+    .ticket-button{
+      background:linear-gradient(45deg, var(--accent1), var(--accent2));
+      border:none;color:#fff;font-weight:600;border-radius:28px;padding:10px 20px;
+      transition:transform .2s ease, box-shadow .2s ease
+    }
+    .ticket-button:hover{transform:scale(1.05);box-shadow:0 8px 18px rgba(78,205,196,.3)}
+    .filter-button{
+      background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.2);
+      padding:8px 16px;border-radius:24px; font-weight:600
+    }
+    .filter-button.active{background:linear-gradient(45deg, var(--accent3), var(--accent1)); border-color:transparent}
+
+    /* Sections */
+    .hero-overlay{
+      background:linear-gradient(135deg, rgba(15,12,41,.9) 0%, rgba(36,36,62,.82) 50%, rgba(44,62,80,.72) 100%);
+      border-radius:20px;
+    }
+    .feature-gradient{background:linear-gradient(90deg, #0b3a40 0%, #2a1a4f 100%); border-radius:20px}
+    .newsletter-gradient{background:linear-gradient(90deg, #0a4950 0%, #3a1b6d 100%); border-radius:20px}
+
+    /* Images */
+    .ratio-16x9{--bs-aspect-ratio:56.25%}
+    .card-img-top{object-fit:cover;height:240px}
+
+    /* Footer */
+    .footer-bg{background:rgba(0,0,0,.5)}
+    .footer-link{color:#bfc6d9;text-decoration:none}
+    .footer-link:hover{color:#00e5ff}

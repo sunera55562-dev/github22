@@ -1,0 +1,401 @@
+ —-/css/—
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+
+
+  
+
+  /* Navbar */
+  
+
+    nav .brand img {
+      height: 45px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    nav .brand img:hover {
+      transform: scale(1.1);
+    }
+
+    nav .brand span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav .nav-links a:hover {
+      color: #698cff;
+    }
+
+    nav .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #3f2092;
+      transition: width 0.3s ease;
+    }
+
+    nav .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      background: #1f1f2e;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 0;
+      animation: fadeDown 0.3s ease;
+    }
+
+    .dropdown-menu .dropdown-item {
+      color: #fff;
+      transition: all 0.3s ease;
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+@media (max-width: 1267px) {
+  .navbar-expand-xxl .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-xxl .navbar-toggler {
+    display: block !important;
+  }
+}
+
+
+.navbar-expand-xxl .navbar-collapse.show {
+  display: block !important;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+   background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* Hero Section */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 600px;   
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
+}
+
+.hero .carousel-caption {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+ 
+  position: absolute;
+  bottom: 20px;  
+  left: 20px;     
+  right: auto;
+  top: auto;
+  text-align: left;
+
+  
+}
+
+
+
+.carousel-item img,
+.carousel-item video {
+  object-fit: cover;
+  height: 100%;
+}
+/* hero section */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh; 
+  }
+  .hero h1 {
+    font-size: 18px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+.hero .btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px rgba(44, 8, 129, 0.9);
+}
+
+
+/* Album card glow effect */
+.album {
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 8px rgba(91, 170, 255, 0.829); /* soft default glow */
+  border: none;
+}
+
+/* Hover effect with stronger glow */
+.album:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 15px rgba(84, 154, 230, 0.815),
+              0 0 25px rgba(255, 167, 218, 0.767),
+              0 0 35px rgba(30, 175, 233, 0.685);
+}
+
+
+ /* Album cards */
+ .album{
+  margin-bottom: 20px;
+ }
+    .album img {
+      height: 200px;
+      object-fit: cover;
+    }
+    /* Card hover bounce */
+.card:hover {
+transform: translateY(-10px) scale(1.05);
+transition: all 0.4s ease;
+}
+
+/* Cards appear with zoom */
+.card {
+animation: zoomIn 1s ease;
+animation-fill-mode: both;
+}
+
+/* Smooth scrolling */
+html {
+scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* Zoom-in cards */
+@keyframes zoomIn {
+from { transform: scale(0.8); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
+}
+
+/* Grid & Cards */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 20px;
+}
+.card {
+background: #2e1d69;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+font-size: 1.2rem;
+transition: transform 0.3s;
+}
+.card:hover { transform: scale(1.05); }
+
+/* Section Headings */
+section h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #61d2d6, #dbe092, #d3c120);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #67e8ff94, 0 0 20px #2be9f0b7;
+  }
+  to {
+    text-shadow: 0 0 20px #ceac78, 0 0 30px #e7902b;
+  }
+}
+
+/* Live Show Cards */
+.bg-dark .card {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(34,34,34,0.95));
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
+}
+
+.bg-dark .card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+}
+
+/* Offers & Membership */
+.btn-danger {
+  border-radius: 35px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0f0c29, #291452);
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+/* About Us */
+.bg-light {
+   background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(255, 249, 249, 0.979);
+  animation: fadeInUp 1.2s ease;
+  
+}
+.btn-light:hover{
+  transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    color: #00e5ff;
+
+}
+/* Newsletter */
+form input[type="email"] {
+  border-radius: 30px;
+  padding: 14px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 12px rgba(80, 71, 122, 0.5);
+}
+
+form button {
+  border-radius: 30px;
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #ff512f, #f09819);
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(255,81,47,0.8);
+}
+
+
+
+/* Footer */
+ /* Footer */
+    .footer-bg{background:rgba(0,0,0,.5)}
+    .footer-link{color:#bfc6d9;text-decoration:none}
+    .footer-link:hover{color:#00e5ff}
+    .gradient-text {
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%;
+      animation: gradient 3s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+@media (max-width: 1053px) {
+  nav .brand span {
+    font-size: 18px; /* smaller brand text */
+  }
+
+  nav .nav-links a {
+    font-size: 0.9rem; /* smaller nav links */
+  }
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+  from { text-shadow: 0 0 15px #ff416c, 0 0 30px #ff4b2b; }
+  to { text-shadow: 0 0 25px #ffdd57, 0 0 50px #ff4b2b; }
+}

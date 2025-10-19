@@ -1,0 +1,162 @@
+ :root{
+       background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+      --accent-pink:#ff6b6b; --accent-teal:#4ecdc4; --accent-cyan:#45b7d1;
+      --muted: #bfc6d9;
+    }
+    html,body{height:100%}
+    body{
+      font-family:"Poppins",sans-serif;
+      margin:0;
+      color:#fff;
+     background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-top:78px; /* space for fixed navbar */
+    }
+/* nav bar */
+      nav .brand img {
+      height: 45px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    nav .brand img:hover {
+      transform: scale(1.1);
+    }
+
+    nav .brand span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav .nav-links a:hover {
+      color: #698cff;
+    }
+
+    nav .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #3f2092;
+      transition: width 0.3s ease;
+    }
+
+    nav .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      background: #1f1f2e;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 0;
+      animation: fadeDown 0.3s ease;
+    }
+
+    .dropdown-menu .dropdown-item {
+      color: #fff;
+      transition: all 0.3s ease;
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+   
+  
+@media (max-width: 1267px) {
+  .navbar-expand-xxl .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-xxl .navbar-toggler {
+    display: block !important;
+  }
+}
+
+.navbar-expand-xxl .navbar-collapse.show {
+  display: block !important;
+}
+
+    /* Gradient animated text (used in headings) */
+    .gradient-text{
+      background: linear-gradient(45deg, var(--accent-pink), var(--accent-teal), var(--accent-cyan));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-size:300% 300%; animation:gradAnim 3s ease infinite;
+      display:inline-block;
+    }
+    @keyframes gradAnim{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+    /* Offer / Card styles to mimic bg-black/40 look */
+    .offer-card {
+      background: linear-gradient(135deg, #0f0c29 0%, #24243e 50%, #2c3e50 100%);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .offer-card h2 { font-size:1.6rem; }
+    .offer-price { font-size:2.25rem; font-weight:700; margin: 0.5rem 0 1rem; }
+
+    /* Special borders for highlighted plan */
+    .offer-card.highlight { border: 2px solid #ff6b9d; }
+
+    /* Buttons */
+    .btn-gradient-pink { background: linear-gradient(90deg,#ff6b6b,#ff3b6e); color:#fff; border:none; border-radius:999px; padding:10px 22px; }
+    .btn-gradient-teal { background: linear-gradient(90deg,#4ecdc4,#45b7d1); color:#000; border:none; border-radius:999px; padding:10px 22px; }
+    .btn-gradient-blue { background: linear-gradient(90deg,#38bdf8,#6366f1); color:#fff; border:none; border-radius:999px; padding:10px 22px; }
+    .btn-gradient-pink:hover, .btn-gradient-teal:hover, .btn-gradient-blue:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.35); }
+
+    /* Special Offer */
+    .special-offer { background: rgba(0,0,0,0.40); padding:28px; border-radius:16px; box-shadow: 0 10px 36px rgba(0,0,0,0.5); }
+
+    /* Live shows card */
+    .show-card {
+      background: rgba(0,0,0,0.40);
+      border-radius:14px;
+      padding:20px;
+      border: 1px solid  rgba(0,0,0,0.40);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+      transition: transform .18s ease;
+    }
+    .show-card:hover { transform: translateY(-6px); }
+
+    .muted { color: #c6cbe0; } /* substitute for text-gray-300 */
+
+    /* Footer */
+    
+    footer { background: rgba(0,0,0,0.5); color:#c6cbe0; }
+    footer a { color:#c6cbe0; text-decoration:none; }
+    footer a:hover { color: #45b7d1; }
+
+    /* Responsive tweaks */
+    @media (max-width:575.98px){
+      .offer-card { padding:22px; }
+    }

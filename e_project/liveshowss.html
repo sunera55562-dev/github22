@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhythm House - Live Shows (Bootstrap)</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+         <link rel="stylesheet" href="liveshows.css">
+        
+
+  
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xxl navbar-dark fixed-top bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <div class="brand">
+          <img src="./images/logo2.png" alt="Logo">
+          <span>Rhythm House</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0 nav-links">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./liveshowss.html">Live Shows</a></li>
+          <li class="nav-item"><a class="nav-link" href="./Offers-Membership.html">Offers &amp; Memberships</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactus.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ALBUMS</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="./BY-MOVIES.HTML">BY MOVIES</a></li>
+              <li><a class="dropdown-item" href="./bands.html">BY BANDS</a></li>
+              <li><a class="dropdown-item" href="./solo.HTML">BY SOLO PERFORMERS</a></li>
+              <li><a class="dropdown-item" href="./album-year.html">BY RELEASE YEAR</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./statistics.html">Statistics</a></li>
+          <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+        </ul>
+
+        <form class="d-flex ms-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search albums..." aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="mt-nav py-5">
+    <div class="container">
+      <div class="hero-overlay p-4 p-md-5 text-center">
+        <h1 class="display-4 fw-bold font-montserrat mb-3">
+          Experience <span class="gradient-text">Live Music</span>
+        </h1>
+        <p class="lead text-dim mx-auto" style="max-width:820px">
+          Discover the hottest live performances at Rhythm House. From emerging artists to world-renowned acts,
+          every show is an unforgettable experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Show -->
+  <section class="py-5">
+    <div class="container">
+      <div class="feature-gradient shadow-lg overflow-hidden">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-md-6">
+            <div class="ratio ratio-16x9 h-100">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c7c8e4d7-115c-4c62-94e8-f91057c13397.png"
+                alt="Featured live performance by The Midnight Collective, dramatic stage lighting with silhouetted musicians against deep purple and blue hues"
+                class="w-100 h-100" onerror="this.style.display='none'">
+            </div>
+          </div>
+          <div class="col-md-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+            <div class="mb-3">
+              <span class="date-badge">DEC 15, 2024 • 8:00 PM</span>
+            </div>
+            <h2 class="h1 fw-bold font-montserrat mb-3">The Midnight Collective</h2>
+            <p class="text-dim mb-4">
+              Award-winning indie rock band known for their electrifying live performances and unique fusion of
+              electronic and rock elements.
+            </p>
+            <div class="d-grid d-sm-flex gap-3">
+              <button class="ticket-button px-4 py-2">Book Tickets</button>
+              <button class="btn btn-outline-info rounded-pill px-4 py-2">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Shows -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="display-6 fw-bold font-montserrat">Upcoming Shows</h2>
+        <p class="text-dim mx-auto" style="max-width:720px">
+          Browse our calendar of upcoming events and secure your spot for the most anticipated performances of the season.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3 mb-4">
+        <button class="filter-button active" data-filter="all" type="button">All Shows</button>
+        <button class="filter-button" data-filter="rock" type="button">Rock</button>
+        <button class="filter-button" data-filter="electronic" type="button">Electronic</button>
+        <button class="filter-button" data-filter="jazz" type="button">Jazz</button>
+        <button class="filter-button" data-filter="indie" type="button">Indie</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="row g-4" id="shows-grid">
+        <!-- Show 1 -->
+        <div class="col-md-6 col-lg-4" data-category="rock">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/image 4.jpg"
+                 alt="Electric Pulse rock band performing with energetic stage presence and dynamic lighting effects"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">DEC 18, 2024 • 7:30 PM</span>
+            <h3 class="h5 fw-bold mt-2">Electric Pulse</h3>
+            <p class="text-dim small mb-3">
+              High-energy rock band bringing raw power and passion to the stage with their signature guitar riffs.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$35 - $75</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 2 -->
+        <div class="col-md-6 col-lg-4" data-category="electronic">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/rock 3.webp"
+                 alt="Neon Waves electronic music duo surrounded by futuristic LED visuals and atmospheric lighting"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">DEC 22, 2024 • 9:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Neon Waves</h3>
+            <p class="text-dim small mb-3">
+              Electronic music duo creating immersive soundscapes with pulsating beats and mesmerizing visual projections.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$40 - $85</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 3 -->
+        <div class="col-md-6 col-lg-4" data-category="electronic">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/image 6.jpg"
+                 alt="Powerful and energetic electronic performance"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">DEC 25, 2024 • 10:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Neon Waves</h3>
+            <p class="text-dim small mb-3">
+              Electronic music duo creating immersive soundscapes with pulsating beats and mesmerizing visual projections.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$45 - $80</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 4 -->
+        <div class="col-md-6 col-lg-4" data-category="jazz">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/rock 3.jpg"
+                 alt="Soul Express jazz quartet performing in intimate club setting with warm golden lighting"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">JAN 5, 2025 • 8:30 PM</span>
+            <h3 class="h5 fw-bold mt-2">Soul Express</h3>
+            <p class="text-dim small mb-3">
+              Acclaimed jazz ensemble delivering smooth, soulful performances that transport audiences to another era.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$45 - $90</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 5 -->
+        <div class="col-md-6 col-lg-4" data-category="jazz">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/rock 4.jpg"
+                 alt="Jazz music — soulful, improvisational, complex rhythms and rich harmonies"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">SEP 09, 2024 • 08:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Neon Waves</h3>
+            <p class="text-dim small mb-3">
+              Electronic music duo creating immersive soundscapes with pulsating beats and mesmerizing visual projections.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$45 - $80</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 6 -->
+        <div class="col-md-6 col-lg-4" data-category="jazz">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/indie 3.jpg"
+                 alt="Jazz performance — expressive melodies and rich harmonies"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">FEB 27, 2024 • 07:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Neon Waves</h3>
+            <p class="text-dim small mb-3">
+              Neon Vortex — dynamic rock group blending classic riffs with modern synth sounds for a unique vibe.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$45 - $60</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 7 -->
+        <div class="col-md-6 col-lg-4" data-category="jazz">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/image 10.jpg"
+                 alt="Jazz performance — expressive melodies and rich harmonies"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">OCT 20, 2024 • 07:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Neon Waves</h3>
+            <p class="text-dim small mb-3">
+              Neon Vortex — dynamic rock group blending classic riffs with modern synth sounds for a unique vibe.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$45 - $60</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 8 -->
+        <div class="col-md-6 col-lg-4" data-category="indie">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c8515e9-b628-4c94-827c-cd1be1b68b41.png"
+                 alt="Wildflower indie folk band performing outdoors with acoustic instruments"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">JAN 12, 2025 • 7:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Wildflower</h3>
+            <p class="text-dim small mb-3">
+              Indie folk band crafting heartfelt melodies and poetic lyrics that resonate with the soul.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$30 - $65</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 8b -->
+        <div class="col-md-6 col-lg-4" data-category="indie">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="./images/indie 4.jpg"
+                 alt="Indie rock — alternative with DIY ethos, creative sounds and heartfelt lyrics"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">JAN 12, 2025 • 7:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Wildflower</h3>
+            <p class="text-dim small mb-3">
+              Indie folk band crafting heartfelt melodies and poetic lyrics that resonate with the soul.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$50 - $70</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show 9 -->
+        <div class="col-md-6 col-lg-4" data-category="electronic">
+          <div class="show-card h-100 p-3">
+            <img class="w-100 rounded mb-3" style="height:190px;object-fit:cover"
+                 src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f56d5145-ff35-4a49-8a72-63c7e4cad5b3.png"
+                 alt="Digital Dreamscape — immersive visual installations and light shows"
+                 onerror="this.style.display='none'">
+            <span class="date-badge mb-2">FEB 2, 2025 • 10:00 PM</span>
+            <h3 class="h5 fw-bold mt-2">Digital Dreamscape</h3>
+            <p class="text-dim small mb-3">
+              Electronic music visionary creating transformative audio-visual experiences that push creative boundaries.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold text-accent">$50 - $95</span>
+              <button class="ticket-button btn-sm">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-5">
+    <div class="container">
+      <div class="newsletter-gradient p-4 p-md-5 text-center">
+        <h2 class="h1 fw-bold font-montserrat mb-3">Never Miss a Beat</h2>
+        <p class="text-dim mb-4 mx-auto" style="max-width:720px">
+          Subscribe to our newsletter and be the first to know about upcoming shows, exclusive pre-sales, and special events.
+        </p>
+        <form class="row g-2 justify-content-center" onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <div class="col-12 col-sm-7 col-md-6 col-lg-5">
+            <input type="email" required class="form-control form-control-lg rounded-pill"
+                   placeholder="Enter your email"
+                   style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff">
+          </div>
+          <div class="col-12 col-sm-auto">
+            <button class="ticket-button px-4 py-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-bg py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="d-flex align-items-center mb-3">
+            <img src="images/logo2.png"
+                 alt="Rhythm House logo" class="rounded me-2" style="width:42px;height:42px"
+                 onerror="this.style.display='none'">
+            <span class="fs-4 fw-bold gradient-text">Rhythm House</span>
+          </div>
+          <p class="text-dim mb-3">Where music comes alive. Experience the best live performances in the heart of the city.</p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-link"><i class="fab fa-spotify"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a class="footer-link" href="./index.html">HOME</a></li>
+            <li><a class="footer-link" href="./liveshowss.html">Live shows</a></li> 
+            <li><a class="footer-link" href="./Offers-Membership.html">Offers and membership</a></li>
+             <li><a class="footer-link" href="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Albums</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./BY-MOVIES.HTML">By movies</a></li>
+              <li><a class="dropdown-item" href="./bands.html">By bands </a></li>
+              <li><a class="dropdown-item" href="./solo.HTML">By solo</a></li>
+              <li><a class="dropdown-item" href="./album-year.html">By release year</a></li>
+            </ul></a></li>
+            <li><a class="footer-link" href="./statistics.html">Statistics</a></li>
+            <li><a class="footer-link" href="./aboutus.html">About us</a></li>
+            <li><a class="footer-link" href="./contactus.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h6 class="fw-bold mb-3">Contact Info</h6>
+          <ul class="list-unstyled text-dim">
+            <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-accent"></i>123 Music Avenue, Downtown</li>
+            <li class="mb-2"><i class="fas fa-phone me-2 text-accent"></i>(555) 123-4567</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2 text-accent"></i>info@rhythmhouse.com</li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h6 class="fw-bold mb-3">Hours</h6>
+          <ul class="list-unstyled text-dim">
+            <li>Mon-Thu: 5PM – 12AM</li>
+            <li>Fri-Sat: 4PM – 2AM</li>
+            <li>Sun: 6PM – 11PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-dim mb-0">© 2024 Rhythm House. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"></script>
+
+  <script>
+    // Category Filter
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.filter-button');
+      const cards = document.querySelectorAll('#shows-grid > [data-category]');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(col => {
+            const cat = col.getAttribute('data-category');
+            const show = (filter === 'all' || cat === filter);
+            col.style.display = show ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
